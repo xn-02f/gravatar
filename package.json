@@ -1,0 +1,27 @@
+{
+  "name": "gravatar",
+  "version": "1.0.0",
+  "description": "A library to generate gravatar image url.",
+  "main": "gravatar.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": {
+    "name": "xn-02f",
+    "url": "https://xn--02f.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xn-02f/gravatar/issues"
+  },
+  "homepage": "https://github.com/xn-02f/gravatar#readme",
+  "keywords": [
+    "gravatar",
+    "gravatar-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xn-02f/gravatar.git"
+  }
+}
+
