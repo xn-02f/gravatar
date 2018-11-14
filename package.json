@@ -25,5 +25,8 @@
   },
   "dependencies": {
     "@xn-02f/md5": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
