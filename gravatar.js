@@ -8,7 +8,7 @@ const md5 = require('@xn-02f/md5');
 
 module.exports = (email) => {
 
-    const gravatarUrl = 'http://www.gravatar.com/';
+    const gravatarUrl = 'https://www.gravatar.com/avatar/';
 
     return gravatarUrl + md5Hash(email);
 

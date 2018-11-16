@@ -10,7 +10,7 @@ const gravatar = require('../gravatar');
 describe('Gravatar Test', () => {
 
     it('"i@huiyifyj.cn" Converted to Gravatar URL Test.', () => {
-        assert.equal(gravatar('i@huiyifyj.cn'), 'http://www.gravatar.com/' + md5('i@huiyifyj.cn'));
+        assert.equal(gravatar('i@huiyifyj.cn'), 'https://www.gravatar.com/avatar/' + md5('i@huiyifyj.cn'));
     });
 
 });
