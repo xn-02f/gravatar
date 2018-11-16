@@ -24,7 +24,7 @@
     "url": "git+https://github.com/xn-02f/gravatar.git"
   },
   "dependencies": {
-    "@xn-02f/md5": "^1.0.0"
+    "@xn-02f/md5": "*"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
