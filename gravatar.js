@@ -10,7 +10,7 @@ module.exports = (email, options, cdn) => {
 
     let gravatarUrl = (cdn) ? cdn : 'https://www.gravatar.com/avatar/';
 
-    !!(options) ? null : console.log('false')
+    (options) ? null : console.log('false');
 
     return gravatarUrl + md5Hash(email);
 
@@ -18,11 +18,11 @@ module.exports = (email, options, cdn) => {
 
 const md5Hash = (email) => {
 
-    const MD5_REGEX = /^[0-9a-f]{32}$/;
+    const MD5REG = /^[0-9a-f]{32}$/;
 
     // http://en.gravatar.com/site/implement/hash/
     email = (typeof email === 'string') ? email.trim().toLowerCase() : 'unspecified';
 
-    return email.match(MD5_REGEX) ? email : md5(email);
+    return email.match(MD5REG) ? email : md5(email);
 
 }
