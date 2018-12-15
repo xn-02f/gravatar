@@ -10,7 +10,7 @@ module.exports = (email, options, cdn) => {
 
     let gravatarUrl = (cdn) ? cdn : 'https://www.gravatar.com/avatar/';
 
-    (options) ? null : console.log('false');
+    (options) ? null : null;
 
     return gravatarUrl + md5Hash(email);
 
