@@ -8,15 +8,30 @@ const gravatar = require('../gravatar');
 
 const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
-describe('Gravatar API Test', () => {
+console.log('Gravatar API Test:')
 
-    it('"i@huiyifyj.cn" Converted to Gravatar URL Test.', () => {
+describe('Only One email Parameter Test', () => {
+
+    it('"i@huiyifyj.cn" converted to gravatar url test.', () => {
 
         const result = gravatar('i@huiyifyj.cn');
 
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
         expect(result).to.include('https://www.gravatar.com/avatar/' + md5('i@huiyifyj.cn'));
+    });
+
+});
+
+describe('Two Parameters Test', () => {
+
+    it('No "format" property test in options parameter.', () => {
+
+        expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
+
+        const result = gravatar('i@huiyifyj.cn', {a: 'a', b: 'b'});
+
+        expect(result).to.include('https://www.gravatar.com/avatar/' + md5('i@huiyifyj.cn') + '?a=a&b=b');
     });
 
 });

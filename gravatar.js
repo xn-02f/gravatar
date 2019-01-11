@@ -13,7 +13,6 @@ module.exports = (email, options) => {
     params = (options) ? handleOptions(options) : null;
 
     return gravatarUrl + md5Hash(email) + params;
-
 }
 
 const md5Hash = (email) => {
@@ -24,5 +23,19 @@ const md5Hash = (email) => {
     email = (typeof email === 'string') ? email.trim().toLowerCase() : 'unspecified';
 
     return email.match(MD5REG) ? email : md5(email);
+}
+
+const handleOptions = (obj) => {
+
+    if (typeof obj === 'object') {
+
+        let params = [];
+
+        for (const key in obj) {
+            params.push(encodeURIComponent(key) +'='+ encodeURIComponent(obj[key]));
+        }
+
+        return '?' + params.join('&');
+    }
 
 }
