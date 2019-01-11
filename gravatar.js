@@ -1,18 +1,18 @@
 /**
  * This is a file that is used to generate gravatar image url.
- * (c) 2018 | xn-02f Lab
+ * (c) 2018-2019 | xn-02f Lab
  * License: MIT
  */
 
 const md5 = require('@xn-02f/md5');
 
-module.exports = (email, options, cdn) => {
+module.exports = (email, options) => {
 
-    let gravatarUrl = (cdn) ? cdn : 'https://www.gravatar.com/avatar/';
+    let gravatarUrl = 'https://www.gravatar.com/avatar/';
 
-    (options) ? null : null;
+    params = (options) ? handleOptions(options) : null;
 
-    return gravatarUrl + md5Hash(email);
+    return gravatarUrl + md5Hash(email) + params;
 
 }
 
