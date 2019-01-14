@@ -10,9 +10,9 @@ module.exports = (email, options) => {
 
     let gravatarUrl = 'https://www.gravatar.com/avatar/';
 
-    params = (options) ? handleOptions(options) : null;
+    queryString = (options) ? handleOptions(options) : null;
 
-    return gravatarUrl + md5Hash(email) + params;
+    return gravatarUrl + md5Hash(email) + queryString;
 }
 
 const md5Hash = (email) => {
@@ -37,5 +37,4 @@ const handleOptions = (obj) => {
 
         return '?' + params.join('&');
     }
-
 }

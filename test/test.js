@@ -25,7 +25,7 @@ describe('Only One email Parameter Test', () => {
 
 describe('Two Parameters Test', () => {
 
-    it('No "format" property test in options parameter.', () => {
+    it('Test in options parameter.', () => {
 
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
