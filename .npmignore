@@ -1,0 +1,7 @@
+# Ignore all file default
+*
+
+# Exceptional files
+!package.json
+!gravatar.js
+!README.md
