@@ -9,6 +9,20 @@ Via npm :
 ```bash
 $ npm i @xn-02f/gravatar
 ```
+## Usage
+```javascript
+const gravatar = require('@xn-02f/gravatar');
+// import gravatar from '@xn-02f/gravatar'
+
+const email = 'i@huiyifyj.cn';
+const options = {size: '80', default: '404'};
+gravatar(email, options);
+```
+| Parameter | Description |
+| --- | --- |
+| email | `string`<br>The gravatar email url. |
+| options | `object`<br>Query string options. Like: `size`, `default`, `rating`, `forcedefault` and other [others](https://en.gravatar.com/site/implement/images/). |
+
 ## License
 > [MIT](https://github.com/xn-02f/gravatar/blob/master/LICENSE)
 
