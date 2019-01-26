@@ -12,4 +12,4 @@ steps:
 - script: |
     npm i
     npm run test
-  displayName: 'Test by mocha'
+  displayName: 'Test'

@@ -10,7 +10,7 @@ module.exports = (email, options) => {
 
     let gravatarUrl = 'https://www.gravatar.com/avatar/';
 
-    queryString = (options) ? handleOptions(options) : null;
+    queryString = (options) ? handleOptions(options) : '';
 
     return gravatarUrl + md5Hash(email) + queryString;
 }
