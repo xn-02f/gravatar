@@ -6,6 +6,7 @@ const md5 = require('@xn-02f/md5');
 
 const gravatar = require('../gravatar');
 
+const baseURL = 'https://www.gravatar.com/avatar/'
 const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
 describe('Only One email Parameter Test', () => {
@@ -16,7 +17,7 @@ describe('Only One email Parameter Test', () => {
 
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
-        expect(result).to.include('https://www.gravatar.com/avatar/' + md5('i@huiyifyj.cn'));
+        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
     });
 
 });
@@ -32,7 +33,7 @@ describe('Two Parameters Test', () => {
             b: 'b'
         });
 
-        expect(result).to.include('https://www.gravatar.com/avatar/' + md5('i@huiyifyj.cn') + '?a=a&b=b');
+        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn') + '?a=a&b=b');
     });
 
 });
