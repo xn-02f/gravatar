@@ -1,6 +1,6 @@
 {
   "name": "@xn-02f/gravatar",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library to generate gravatar image url.",
   "main": "gravatar.js",
   "scripts": {
