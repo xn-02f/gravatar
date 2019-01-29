@@ -8,12 +8,12 @@ const md5 = require('@xn-02f/md5');
 
 module.exports = (email, options) => {
 
-    let gravatarUrl = 'https://www.gravatar.com/avatar/';
-
     queryString = (options) ? handleOptions(options) : '';
 
     return gravatarUrl + md5Hash(email) + queryString;
 }
+
+const gravatarUrl = 'https://www.gravatar.com/avatar/';
 
 const md5Hash = (email) => {
 
@@ -32,7 +32,7 @@ const handleOptions = (obj) => {
         let params = [];
 
         for (const key in obj) {
-            params.push(encodeURIComponent(key) +'='+ encodeURIComponent(obj[key]));
+            params.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
         }
 
         return '?' + params.join('&');
