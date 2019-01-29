@@ -46,3 +46,16 @@ describe('Two Parameters Test', () => {
     });
 
 });
+
+describe('Other Relevant Test', () => {
+
+    it('Conversion of uppercase and lowercase letters', () => {
+
+        expect(mailReg.test('I@HuiyiFYJ.cn')).to.be.true;
+
+        const result = gravatar('I@HuiyiFYJ.cn');
+
+        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
+    });
+
+});
