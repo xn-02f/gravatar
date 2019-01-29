@@ -27,6 +27,10 @@ const md5Hash = (email) => {
 
 const handleOptions = (obj) => {
 
+    if (Object.keys(obj).length == 0) {
+        return '';
+    }
+
     if (typeof obj === 'object') {
 
         let params = [];

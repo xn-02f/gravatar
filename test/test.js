@@ -9,7 +9,7 @@ const gravatar = require('../gravatar');
 const baseURL = 'https://www.gravatar.com/avatar/'
 const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
-describe('Only One email Parameter Test', () => {
+describe('Only One E-mail String Parameter Test', () => {
 
     it('"i@huiyifyj.cn" converted to gravatar url test.', () => {
 
@@ -24,7 +24,16 @@ describe('Only One email Parameter Test', () => {
 
 describe('Two Parameters Test', () => {
 
-    it('Test in options parameter.', () => {
+    it('Options parameter is null object.', () => {
+
+        expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
+
+        const result = gravatar('i@huiyifyj.cn', {});
+
+        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'))
+    });
+
+    it('Options parameter is not null.', () => {
 
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
