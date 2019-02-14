@@ -15,10 +15,6 @@
     "url": "https://github.com/xn-02f/gravatar/issues"
   },
   "homepage": "https://github.com/xn-02f/gravatar#readme",
-  "keywords": [
-    "gravatar",
-    "gravatar-api"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xn-02f/gravatar.git"
@@ -29,5 +25,12 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
-  }
+  },
+  "files": [
+    "gravatar.js"
+  ],
+  "keywords": [
+    "gravatar",
+    "gravatar-api"
+  ]
 }
