@@ -23,7 +23,7 @@ gravatar(email, options);
 | Parameter | Description |
 | --- | --- |
 | email | `string`<br>The gravatar email url. |
-| options | `object`<br>Query string options. Like: `size`, `default`, `rating`, `forcedefault` and other [others](https://en.gravatar.com/site/implement/images/). |
+| options | `object`<br>Query string options. Like: `size`, `default`, `rating`, `forcedefault` and [others](https://en.gravatar.com/site/implement/images/). |
 ### About options parameter
 | Property | Alias | Default | Description |
 | --- | --- | --- | --- |
