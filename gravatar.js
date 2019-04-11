@@ -9,14 +9,12 @@ const md5 = require('@xn-02f/md5');
 const gravatarUrl = 'https://www.gravatar.com/avatar/';
 
 module.exports = (email, options) => {
-
     queryString = (options) ? handleOptions(options) : '';
 
     return gravatarUrl + md5Hash(email) + queryString;
 }
 
-const md5Hash = (email) => {
-
+const md5Hash = email => {
     const MD5REG = /^[0-9a-f]{32}$/;
 
     // http://en.gravatar.com/site/implement/hash/
@@ -25,14 +23,12 @@ const md5Hash = (email) => {
     return email.match(MD5REG) ? email : md5(email);
 }
 
-const handleOptions = (obj) => {
-
+const handleOptions = obj => {
     if (Object.keys(obj).length == 0) {
         return '';
     }
 
     if (typeof obj === 'object') {
-
         let params = [];
 
         for (const key in obj) {

@@ -10,22 +10,17 @@ const baseURL = 'https://www.gravatar.com/avatar/'
 const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
 describe('Only One E-mail String Parameter Test', () => {
-
     it('"i@huiyifyj.cn" converted to gravatar url test.', () => {
-
         const result = gravatar('i@huiyifyj.cn');
 
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
         expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
     });
-
 });
 
 describe('Two Parameters Test', () => {
-
     it('Options parameter is null object.', () => {
-
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
         const result = gravatar('i@huiyifyj.cn', {});
@@ -34,7 +29,6 @@ describe('Two Parameters Test', () => {
     });
 
     it('Options parameter is not null.', () => {
-
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
         const result = gravatar('i@huiyifyj.cn', {
@@ -44,18 +38,14 @@ describe('Two Parameters Test', () => {
 
         expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn') + '?a=a&b=b');
     });
-
 });
 
 describe('Other Relevant Test', () => {
-
     it('Conversion of uppercase and lowercase letters', () => {
-
         expect(mailReg.test('I@HuiyiFYJ.cn')).to.be.true;
 
         const result = gravatar('I@HuiyiFYJ.cn');
 
         expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
     });
-
 });
