@@ -1,14 +1,14 @@
 # GitLab CI configuration file
-# https://gitlab.com/xn/gravatar
+# https://gitlab.com/xn-02f/gravatar
 image: node:latest
 
 stages:
   - test
 
 before_script:
-  - npm install
+  - npm i
 
 test:
   stage: test
   script:
-    - npm run test
+    - npm test
