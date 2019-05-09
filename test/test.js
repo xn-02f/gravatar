@@ -38,16 +38,16 @@ describe('Two Parameters Test', () => {
         expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
 
         const result = gravatar('i@huiyifyj.cn', {
-            a: 'a',
-            b: 'b'
+            s: 80,
+            d: 'wavatar'
         });
 
-        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn') + '?a=a&b=b');
+        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn') + '?s=80&d=wavatar');
     });
 });
 
 describe('Other Relevant Test', () => {
-    it('Conversion of uppercase and lowercase letters', () => {
+    it('Conversion of uppercase and lowercase letters.', () => {
         expect(mailReg.test('I@HuiyiFYJ.cn')).to.be.true;
 
         const result = gravatar('I@HuiyiFYJ.cn');
