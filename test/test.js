@@ -19,9 +19,10 @@ describe('Only One Email Parameter Test', () => {
     });
 
     it('Non-string email parameter test.', () => {
+        const UNSPECIFIED = '00000000000000000000000000000000'
         const result = gravatar(123);
 
-        expect(result).to.be.equal(baseURL + md5('unspecified'));
+        expect(result).to.be.equal(baseURL + UNSPECIFIED);
     });
 });
 

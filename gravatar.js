@@ -15,12 +15,13 @@ module.exports = (email, options) => {
 }
 
 const md5Hash = email => {
-    const MD5REG = /^[0-9a-f]{32}$/;
+    const MD5_REG = /^[0-9a-f]{32}$/;
+    const UNSPECIFIED = '00000000000000000000000000000000'
 
     // http://en.gravatar.com/site/implement/hash/
-    email = (typeof email === 'string') ? email.trim().toLowerCase() : 'unspecified';
+    email = (typeof email === 'string') ? email.trim().toLowerCase() : UNSPECIFIED;
 
-    return email.match(MD5REG) ? email : md5(email);
+    return email.match(MD5_REG) ? email : md5(email);
 }
 
 const handleOptions = obj => {
