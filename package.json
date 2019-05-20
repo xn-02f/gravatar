@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "A library to generate gravatar image url.",
   "main": "gravatar.js",
+  "types": "gravatar.d.ts",
   "scripts": {
     "test": "mocha"
   },
@@ -27,7 +28,8 @@
     "mocha": "^6.1.4"
   },
   "files": [
-    "gravatar.js"
+    "gravatar.js",
+    "gravatar.d.ts"
   ],
   "keywords": [
     "gravatar",
