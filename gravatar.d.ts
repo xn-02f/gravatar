@@ -10,7 +10,7 @@
  * ```
  */
 
-declare const gravatar = (
+declare const gravatar: (
 	email: string,
 	options?: object
 ) => string;
