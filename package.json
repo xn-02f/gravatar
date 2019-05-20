@@ -28,7 +28,8 @@
     "mocha": "^6.1.4"
   },
   "files": [
-    "gravatar.js"
+    "gravatar.js",
+    "gravatar.d.ts"
   ],
   "keywords": [
     "gravatar",
