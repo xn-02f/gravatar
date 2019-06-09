@@ -11,8 +11,10 @@
  */
 
 declare const gravatar: (
-	email: string,
-	options?: object
+    email: string,
+
+    // TODO Refine 'options' parameter.
+    options?: object
 ) => string;
 
 export = gravatar;

@@ -38,6 +38,6 @@ const handleOptions = obj => {
 
         return '?' + params.join('&');
     } else {
-        throw Error('options must be object...');
+        throw Error('\'options\' parameter must be object...');
     }
 }
