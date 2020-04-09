@@ -1,58 +1,54 @@
 /*
  * This file is used to test.
  */
-const {expect} = require('chai');
-const md5 = require('@xn-02f/md5');
+const test = require('ava')
+const md5 = require('@xn-02f/md5')
 
-const gravatar = require('../gravatar');
+const gravatar = require('../gravatar')
 
 const baseURL = 'https://www.gravatar.com/avatar/'
-const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/
+const UNSPECIFIED = '00000000000000000000000000000000'
 
-describe('Only One Email Parameter Test', () => {
-    it('"i@huiyifyj.cn" string converted to gravatar url test.', () => {
-        const result = gravatar('i@huiyifyj.cn');
+test('Only One Email Parameter Test', t => {
+    t.is(
+        gravatar('i@huiyifyj.cn'),
+        baseURL + md5('i@huiyifyj.cn'),
+        '"i@huiyifyj.cn" string converted to gravatar url test.'
+    )
 
-        expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
+    t.is(
+        gravatar(123),
+        baseURL + UNSPECIFIED,
+        'Non-string email parameter test.'
+    )
+})
 
-        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
-    });
+test('Two Parameters Test',  t => {
+    t.true(mailReg.test('i@huiyifyj.cn'))
 
-    it('Non-string email parameter test.', () => {
-        const UNSPECIFIED = '00000000000000000000000000000000'
-        const result = gravatar(123);
+    t.is(
+        gravatar('i@huiyifyj.cn', {}),
+        baseURL + md5('i@huiyifyj.cn'),
+        'Options parameter is null object.'
+    )
 
-        expect(result).to.be.equal(baseURL + UNSPECIFIED);
-    });
-});
-
-describe('Two Parameters Test', () => {
-    it('Options parameter is null object.', () => {
-        expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
-
-        const result = gravatar('i@huiyifyj.cn', {});
-
-        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'))
-    });
-
-    it('Options parameter is not null.', () => {
-        expect(mailReg.test('i@huiyifyj.cn')).to.be.true;
-
-        const result = gravatar('i@huiyifyj.cn', {
+    t.is(
+        gravatar('i@huiyifyj.cn', {
             s: 80,
             d: 'wavatar'
-        });
+        }),
+        baseURL + md5('i@huiyifyj.cn') + '?s=80&d=wavatar',
+        'Options parameter is not null.'
+    )
+})
 
-        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn') + '?s=80&d=wavatar');
-    });
-});
+test('Other Relevant Test', t => {
+    t.true(mailReg.test('I@HuiyiFYJ.cn'))
 
-describe('Other Relevant Test', () => {
-    it('Conversion of uppercase and lowercase letters.', () => {
-        expect(mailReg.test('I@HuiyiFYJ.cn')).to.be.true;
-
-        const result = gravatar('I@HuiyiFYJ.cn');
-
-        expect(result).to.be.equal(baseURL + md5('i@huiyifyj.cn'));
-    });
-});
+    t.is(
+        gravatar('I@HuiyiFYJ.cn'),
+        baseURL + md5('i@huiyifyj.cn'),
+        'Conversion of uppercase and lowercase letters.'
+    )
+})
