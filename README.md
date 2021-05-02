@@ -1,5 +1,5 @@
 # Gravatar
-[![TravisCI](https://img.shields.io/travis/com/xn-02f/gravatar/master.svg?style=flat-square&logo=travis)](https://travis-ci.com/xn-02f/gravatar)
+[![GithubActions](https://img.shields.io/github/workflow/status/xn-02f/gravatar/test?style=flat-square&logo=github)](https://github.com/xn-02f/gravatar/actions)
 [![GitLabCI](https://img.shields.io/gitlab/pipeline/xn-02f/gravatar/master.svg?style=flat-square&logo=gitlab)](https://gitlab.com/xn-02f/gravatar/pipelines)
 [![AzurePipeline](https://img.shields.io/azure-devops/build/xn-02f/xn-02f/9/master.svg?style=flat-square&logo=azure-pipelines)](https://dev.azure.com/xn-02f/xn-02f/_build?definitionId=9)
 [![npm](https://img.shields.io/npm/v/@xn-02f/gravatar.svg?style=flat-square&logo=npm)](https://www.npmjs.com/package/@xn-02f/gravatar)
