@@ -1,6 +1,6 @@
 /**
  * This is a file that is used to generate gravatar image url.
- * (c) 2018-2019 | xn-02f Lab
+ * (c) 2018 | xn-02f Lab
  * License: MIT
  */
 

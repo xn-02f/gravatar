@@ -39,6 +39,6 @@ gravatar(email, options);
 <br>
 <div align=center>
     <sub>
-        &copy; 2020 | <a href="https://xn--02f.com">xn-02f</a>
+        &copy; 2021 | <a href="https://xn--02f.com">xn-02f</a>
     </sub>
 </div>
