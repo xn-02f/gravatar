@@ -24,7 +24,7 @@
     "@xn-02f/md5": "*"
   },
   "devDependencies": {
-    "ava": "^3.6.0"
+    "ava": "^4.3.0"
   },
   "files": [
     "gravatar.js",
