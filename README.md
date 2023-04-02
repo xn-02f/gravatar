@@ -2,7 +2,7 @@
 
 [![Actions](https://img.shields.io/github/actions/workflow/status/xn-02f/gravatar/test.yml?style=flat-square&logo=github)](https://github.com/xn-02f/gravatar/actions)
 [![npm](https://img.shields.io/npm/v/@xn-02f/gravatar.svg?style=flat-square&logo=npm)](https://www.npmjs.com/package/@xn-02f/gravatar)
-[![LICENSE](https://img.shields.io/github/license/xn-02f/gravatar.svg?style=flat-square&logo=opensourceinitiative)](https://github.com/xn-02f/gravatar/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/github/license/xn-02f/gravatar.svg?style=flat-square&logo=opensourceinitiative)](https://github.com/xn-02f/gravatar/blob/main/LICENSE)
 
 > 🖼 `Gravatar` is a node library to generate gravatar image url.
 
@@ -41,7 +41,7 @@ gravatar(email, options);
 
 ### License
 
-> [MIT](https://github.com/xn-02f/gravatar/blob/master/LICENSE)
+> [MIT](https://github.com/xn-02f/gravatar/blob/main/LICENSE)
 
 <br>
 <br>
