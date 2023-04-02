@@ -5,7 +5,7 @@
   "main": "gravatar.js",
   "types": "gravatar.d.ts",
   "scripts": {
-    "test": "ava test/*.js -v"
+    "test": "ava test/*.js -v && tsd -f test/gravatar.test-d.ts"
   },
   "author": {
     "name": "xn-02f",
@@ -24,7 +24,8 @@
     "@xn-02f/md5": "*"
   },
   "devDependencies": {
-    "ava": "^3.6.0"
+    "ava": "^3.6.0",
+    "tsd": "^0.28.1"
   },
   "files": [
     "gravatar.js",
