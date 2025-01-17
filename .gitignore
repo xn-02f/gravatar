@@ -6,9 +6,11 @@ package-lock.json
 
 # yarn
 yarn.lock
-yarn-error.log
 
-# Mac
+# pnpm
+pnpm-lock.yaml
+
+# macOS
 .DS_Store
 
 # VS Code

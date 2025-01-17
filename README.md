@@ -42,11 +42,3 @@ gravatar(email, options);
 ### License
 
 > [MIT](https://github.com/xn-02f/gravatar/blob/main/LICENSE)
-
-<br>
-<br>
-<div align=center>
-    <sub>
-        &copy; 2024 &nbsp; | &nbsp; <a href="https://xn--02f.com">xn-02f</a>
-    </sub>
-</div>
