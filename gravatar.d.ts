@@ -4,8 +4,8 @@
  * @param email - Email matching a Gravatar profile.
  * @example
  * ```
- * import gravatarUrl = require('@xn-02f/gravatar');
- * gravatarUrl('i@example.com', {s: 80});
+ * import gravatar from '@xn-02f/gravatar';
+ * gravatar('i@example.com', {s: 80});
  * //=> 'https://www.gravatar.com/avatar/961254e23a4de2aa887ac0f56ef5debf?s=80'
  * ```
  */
@@ -17,4 +17,4 @@ declare const gravatar: (
     options?: object
 ) => string;
 
-export = gravatar;
+export default gravatar;
