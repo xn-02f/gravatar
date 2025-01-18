@@ -4,12 +4,12 @@
  * License: MIT
  */
 
-const md5 = require('@xn-02f/md5');
+import md5 from '@xn-02f/md5';
 
 const gravatarUrl = 'https://www.gravatar.com/avatar/';
 
-module.exports = (email, options) => {
-    queryString = (options) ? handleOptions(options) : '';
+export default (email, options) => {
+    let queryString = (options) ? handleOptions(options) : '';
 
     return gravatarUrl + md5Hash(email) + queryString;
 }

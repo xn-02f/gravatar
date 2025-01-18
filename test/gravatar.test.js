@@ -1,10 +1,10 @@
 /*
  * This file is used to test.
  */
-const test = require('ava')
-const md5 = require('@xn-02f/md5')
+import test from 'ava'
+import md5 from '@xn-02f/md5'
 
-const gravatar = require('../gravatar')
+import gravatar from '../gravatar.js'
 
 const baseURL = 'https://www.gravatar.com/avatar/'
 const mailReg = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/
