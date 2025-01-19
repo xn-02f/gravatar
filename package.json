@@ -26,8 +26,8 @@
     "@xn-02f/md5": "*"
   },
   "devDependencies": {
-    "ava": "^5.2.0",
-    "tsd": "^0.28.1"
+    "ava": "^6.2.0",
+    "tsd": "^0.31.2"
   },
   "engines": {
     "node": ">=16"
@@ -37,6 +37,7 @@
     "gravatar.d.ts"
   ],
   "keywords": [
+    "avatar",
     "gravatar",
     "gravatar-api"
   ]
