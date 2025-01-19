@@ -11,18 +11,22 @@
 Via npm :
 
 ```bash
-$ npm i @xn-02f/gravatar
+npm i @xn-02f/gravatar
 ```
+
+> [!NOTE]
+> This library was moved to ESM from `v2`.
+>
+> If ESM doesn't work well with your node version, switch to the `1.x` version for CJS compatibility.
 
 ## Usage
 
 ```javascript
-const gravatar = require('@xn-02f/gravatar');
-// import gravatar from '@xn-02f/gravatar'
+const gravatar = require('@xn-02f/gravatar')
 
-const email = 'i@huiyifyj.cn';
-const options = {size: '80', default: '404'};
-gravatar(email, options);
+const email = 'i@xn--02f.com'
+const options = {size: '80', default: '404'}
+gravatar(email, options)
 ```
 
 | Parameter | Description |
